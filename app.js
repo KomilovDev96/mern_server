@@ -8,6 +8,7 @@ const cors = require('cors')
 
 // Router imports
 const authRouter = require("./routes/auth.routes")
+const mainRouter = require("./routes/main")
 const fileRouter = require("./routes/file.routes")
 const filePathMiddleware = require('./middleware/filepath.middleware')
 
@@ -23,6 +24,7 @@ app.use(cors())
 app.use(express.static('static'))
 
 //Router
+app.use("/", mainRouter)
 app.use("/api/auth", authRouter)
 app.use("/api/files", fileRouter)
 
