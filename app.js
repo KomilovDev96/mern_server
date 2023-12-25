@@ -24,7 +24,7 @@ app.use(cors())
 app.use(express.static('static'))
 
 //Router
-app.use("/", mainRouter)
+app.use(mainRouter)
 app.use("/api/auth", authRouter)
 app.use("/api/files", fileRouter)
 

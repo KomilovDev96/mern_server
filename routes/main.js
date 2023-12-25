@@ -1,6 +1,6 @@
 const Router = require("express");
 const router = new Router()
-router.get(async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         return res.json({
             message: "hello World"
